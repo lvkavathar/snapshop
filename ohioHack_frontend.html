@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Pixearch</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/8c543a4b29.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<link rel="stylesheet" type="text/css" href="ohioHack_frontend.css">
+</head>
+
+<body >
+<div>
+    <video autoplay="true" id="videoElement">
+    </video>
+    <button type="button" class="btn btn-success btn-circle btn-xl" onclick="subfun()" id="subbutton"><i class="fa fa-camera" data-toggle="modal" data-target="#myModal"></i></button>
+  </div>
+<div>
+  <!-- Modal -->
+  <div class="modal " id="myModal" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" onClick="history.go(0)" data-dismiss="modal" >&times;</button>
+          <h4 class="modal-title" style="text-align: center" id="tit">Search results</h4>
+        </div>
+        <div class="modal-body" id="m-body">
+          <div class="product-box">
+        <a target="_blank" id="d0">
+            <img id="i0" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t0"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b0" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <div class="product-box">
+    <a target="_blank" id="d1">
+      <img id="i1" src="" width="120" height="160">
+    </a>
+    <div class="product-title">
+      <h3 id="t1"></h3>
+    </div>
+    <div>
+      <span class="a-button a-button-primary">
+          <a target="_blank" id="b1"  style="text-decoration:none">
+              <span class="a-button-inner">
+                  <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                  <input class="a-button-input" type="submit" value="Add to cart">
+                  <span class="a-button-text">Shop Now</span>
+              </span>
+          </a>
+      </span>
+    </div>
+    </div>
+
+    <div class="product-box">
+  <a target="_blank" id="d2">
+      <img id="i2" src="" width="120" height="160" align="middle">
+  </a>
+  <div class="product-title">
+      <h3 id="t2"></h3>
+  </div>
+  <div>
+      <span class="a-button a-button-primary">
+          <a target="_blank" id="b2" style="text-decoration:none">
+              <span class="a-button-inner">
+                  <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                  <input class="a-button-input" type="submit" value="Add to cart">
+                  <span class="a-button-text">Shop Now</span>
+              </span>
+          </a>
+      </span>
+  </div>
+</div>
+<div class="product-box">
+        <a target="_blank" id="d3">
+            <img id="i3" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t3"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b3" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+<div class="product-box">
+        <a target="_blank" id="d4">
+            <img id="i4" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t4"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b4" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+<div class="product-box">
+        <a target="_blank" id="d5">
+            <img id="i5" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t5"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b5" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+<div class="product-box">
+        <a target="_blank" id="d6">
+            <img id="i6" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t6"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b6" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+<div class="product-box">
+        <a target="_blank" id="d7">
+            <img id="i7" src="" width="120" height="160">
+        </a>
+        <div class="product-title">
+            <h3 id="t7"></h3>
+        </div>
+        <div>
+            <span class="a-button a-button-primary">
+                <a target="_blank" id="b7" style="text-decoration:none">
+                    <span class="a-button-inner">
+                        <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                        <input class="a-button-input" type="submit" value="Add to cart">
+                        <span class="a-button-text">Shop Now</span>
+                    </span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<canvas id="myCanvas">
+</canvas>
+<script>
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+var video = document.querySelector("#videoElement");
+
+if (navigator.getUserMedia) {
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+    }
+
+function videoError(e) {
+    // do something
+}
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+
+}
+
+function subfun(){
+  var canvas = document.getElementById("myCanvas");
+     canvas.width = video.videoWidth;
+     canvas.height = video.videoHeight;
+     canvas.getContext('2d').drawImage(video, 0, 0);
+     var imgData = canvas.toDataURL("img/png");
+     result =  imgData.replace(/^data:image\/(png|jpg);base64,/, "");
+     var data = {"requests":[{"image":{"content":result},"features":[{"type":"LABEL_DETECTION","maxResults":1}]}]};
+     $.ajax({
+     url: 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAzFI9CitPQnQUGyPz9eGXx8tRkoNCobGc',
+     type: 'POST',
+     data: JSON.stringify(data),
+     headers: {
+      "Content-Type": "application/json",
+    },
+     dataType: 'json',
+     success: function(msg) {
+     var result1 = JSON.stringify(msg);
+     var result2 = JSON.parse(result1);
+
+     var url = '/' + 'api?keyword='+ result2.responses[0].labelAnnotations[0].description;
+     console.log(url);
+     var posting = $.get(url);
+    posting.done(function(data){
+  //   alert(data[0].detailpageurl);
+    for (i=0; i<8; i++){
+      //document.getElementById(''+ 'd'+ i + '').href= data[i].detailpageurl;
+      document.getElementById(''+ 'b'+ i + '').href= data[i].detailpageurl;
+      document.getElementById(''+ 'i' + i+ '').src= data[i].medimg;
+      document.getElementById(''+ 't'+ i + '').innerHTML= data[i].title;
+    }
+
+    });
+document.getElementById('tit').innerHTML = "<b>"  +  result2.responses[0].labelAnnotations[0].description + "</b>" +' is what I see!!!!!!!!';
+    }
+});
+     //imgData = imgData.replace('data:image/png;base64, ',' ');
+     //var postData = JSON.stringify({imageData: imgData});
+     //alert(imgData);
+  }
+
+</script>
+
+</body>
+</html>
